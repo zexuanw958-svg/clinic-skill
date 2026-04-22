@@ -117,6 +117,48 @@ flowchart TD
     H --> I[处方或继续追问]
 ```
 
+### 一个短对比：普通 assistant 会解释，`clinic` 会拆开
+
+用户问题：
+
+> 我是不是把勤奋当成了思考的替代品？
+
+一个普通 assistant 往往会给出一段顺滑、完整、也不算错的分析，比如：
+
+- 你可能一直在做“不暴露判断质量”的事
+- 你很忙，但关键问题推进很慢
+- 你在用输出数量安慰自己，而不是追问方向是否正确
+- 真正的问题可能不是不努力，而是没有面对真正需要判断的地方
+
+这种回答的问题不在于它错。  
+问题在于，它基本只给出了一条解释路径，而且很快就开始收束。
+
+`clinic` 会先把这个问题拆开，而不是马上替你下结论。
+
+例如，一次合理的会诊阵容可能是：
+
+- **费曼**
+  - 先看你到底有没有想清楚问题，还是只是把“做了很多事”误当成了理解
+- **芒格**
+  - 先看你是不是在用忙碌回避判断，尤其是在回避那个真正有风险的决定
+- **王阳明**
+  - 先看你所谓的“行”，到底是不是建立在真知之上，还是只是动作很多
+
+主持人不会急着说“对，你就是在假装勤奋”。  
+更好的诊断方式通常是把它拆成至少三种可能：
+
+- 你不是不勤奋，而是没有真正定义问题
+- 你不是没思考，而是在回避那个会暴露判断对错的决策点
+- 你不是知行合一，而是在用持续行动掩盖并未形成判断这件事
+
+差别就在这里：
+
+- 普通 assistant 比较擅长把这个问题**解释清楚**
+- `clinic` 更想把这个问题**拆出几种不同的成立方式**
+
+前者更顺。  
+后者更容易逼近真实问题。
+
 ### 它和普通方案有什么不同
 
 **不是普通 assistant**
@@ -336,6 +378,50 @@ flowchart TD
     G --> H[Diagnosis: consensus / disagreement / blind spots]
     H --> I[Prescription or follow-up]
 ```
+
+### A Short Contrast: a normal assistant explains, `clinic` separates
+
+User prompt:
+
+> Am I using diligence as a substitute for thinking?
+
+A normal assistant will often produce a smooth, reasonable explanation such as:
+
+- you may be doing work that never exposes the quality of your judgment
+- you stay busy, but the core problem moves slowly
+- output volume is being used as reassurance
+- the real issue may not be effort, but avoidance of the actual decision point
+
+That answer is not necessarily wrong.
+
+The problem is that it usually gives you one clean interpretive path, then starts converging too early.
+
+`clinic` tries to separate the problem before resolving it.
+
+A plausible consultation roster here might be:
+
+- **Feynman**
+  - are you actually thinking, or just mistaking activity for understanding?
+- **Munger**
+  - are you using busyness to avoid the judgment that carries real downside?
+- **Wang Yangming**
+  - is your "action" grounded in real understanding, or is it just motion?
+
+The host should not rush to say: "yes, you are faking diligence."
+
+A better diagnosis is to separate at least three live possibilities:
+
+- you are not under-working; you may be avoiding the real problem definition
+- you are not failing to think; you may be avoiding the decision that would expose whether your judgment is right
+- you are not achieving unity of thought and action; you may be using continuous action to cover for the absence of judgment
+
+That is the difference:
+
+- a normal assistant is good at **explaining the problem**
+- `clinic` is trying to **separate the problem into distinct possibilities**
+
+The first is smoother.  
+The second is often more useful.
 
 ### Why It Feels Different
 
