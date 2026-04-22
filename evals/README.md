@@ -15,6 +15,7 @@ The suite evaluates four layers:
 2. `routing`: which mode should the host choose
 3. `doctor_selection`: which doctors should be selected and why
 4. `end_to_end`: whether the full consultation is useful without flattening disagreement
+5. `multi_turn`: whether follow-up rounds preserve intent, role separation, and the right mode
 
 ## External References
 
@@ -39,6 +40,8 @@ These are not mirrored into the repository. They are used as reference sources w
   - Doctor selection expectations
 - `clinic/end_to_end.jsonl`
   - Full-chain consultation eval set
+- `clinic/multi_turn.jsonl`
+  - Follow-up and context-compression eval set
 
 ## Evaluation Philosophy
 
@@ -51,6 +54,7 @@ We are trying to answer narrower questions:
 - Does it pick sufficiently distinct doctors?
 - Does it preserve disagreement rather than collapsing it into bland synthesis?
 - Does it produce actionable output when action is appropriate?
+- Does it remain coherent after several rounds of follow-up?
 
 ## Recommended Process
 

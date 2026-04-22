@@ -86,6 +86,39 @@ Scoring:
 - `1`: somewhat useful but vague
 - `0`: generic advice
 
+### 8. Multi-turn Coherence
+
+Question:
+Across multiple rounds, does the host keep the real thread of the conversation instead of resetting or drifting?
+
+Scoring:
+
+- `2`: coherent across turns
+- `1`: mostly coherent but loses one important thread
+- `0`: resets, drifts, or contradicts earlier context
+
+### 9. Mode Transition Correctness
+
+Question:
+When the user follows up, does the host keep or change modes correctly?
+
+Scoring:
+
+- `2`: correct transition or correct non-transition
+- `1`: understandable but weak choice
+- `0`: clear mode error
+
+### 10. Context Compression Integrity
+
+Question:
+After several rounds, if context is summarized, are the right conflict points preserved?
+
+Scoring:
+
+- `2`: preserves the real conflict and decision points
+- `1`: preserves some but drops an important distinction
+- `0`: compresses away the actual issue
+
 ## Failure Modes to Watch
 
 - Over-triggering on generic help-seeking language
@@ -94,6 +127,9 @@ Scoring:
 - Losing adversarial tension in the final summary
 - Giving a fake "balanced" conclusion that no doctor actually argued for
 - Asking for roster confirmation when direct execution would have been better
+- Forgetting what the user was actually asking after a follow-up turn
+- Changing to the wrong mode after the user clarifies or narrows the issue
+- Compressing multi-turn context into generic therapy language
 
 ## Output Recording Template
 
@@ -110,4 +146,7 @@ Suggested columns:
 - `summary_fidelity_score`
 - `disagreement_preservation_score`
 - `actionability_score`
+- `multi_turn_coherence_score`
+- `mode_transition_score`
+- `context_compression_score`
 - `notes`

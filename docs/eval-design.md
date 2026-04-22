@@ -90,6 +90,17 @@ Evaluate the actual user-visible output.
 Primary question:
 Did the consultation preserve disagreement, expose assumptions, and produce useful next steps?
 
+### Multi-turn
+
+Goal:
+Check whether the skill stays coherent after follow-up turns and context compression.
+
+Primary questions:
+
+- Does the host preserve the real thread of the conversation?
+- Does the mode stay stable when it should, and change when it should?
+- Does summary compression keep the actual conflict instead of washing it out?
+
 ## Initial Evaluation Policy
 
 For now, evaluate manually or with lightweight LLM-as-judge support.
