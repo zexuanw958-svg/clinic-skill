@@ -12,15 +12,15 @@
 
 `clinic` 是一个可复用的诊所式 skill 框架。
 
-它不是把几个人设拼在一起轮流说话，也不是一个装饰性的 multi-agent demo。  
-它的核心结构是：
+它不是把几个人设拼在一起轮流说话，也不是那种看着热闹、其实没什么秩序的 multi-agent demo。  
+它真正的骨架是：
 
 - 一个不扮演医生的主持人
 - 一组具有明确框架差异的医生
 - 一个强调暴露前提、保留分歧、避免讨好的会诊流程
 - 一套持续迭代的评测体系
 
-你可以把它理解成：
+如果要用一句话概括：
 
 > 不是替用户快速给答案，  
 > 而是把问题拆开，把前提暴露出来，把有价值的分歧留下来。
@@ -29,8 +29,8 @@
 
 `clinic` 里的医生，并不是临时写出来的 AI 角色。
 
-这个项目里的医生侧 skill，主要建立在 [nuwa-skill](https://github.com/alchaincyf/nuwa-skill) 这套蒸馏方法之上。  
-`nuwa-skill` 做的不是“模仿名人说话”，而是从公开材料中提炼一个人的：
+这里的医生侧 skill，主要建立在 [nuwa-skill](https://github.com/alchaincyf/nuwa-skill) 这套蒸馏方法之上。  
+`nuwa-skill` 不是在做“模仿名人说话”，而是在尽量从公开材料里提炼一个人的：
 
 - 心智模型
 - 决策启发式
@@ -38,34 +38,34 @@
 - 价值边界与反模式
 - 诚实边界
 
-也就是说，`clinic` 里的医生不是靠口头禅维持风格，而是尽量基于可追溯的认知框架来分析问题。
+所以，`clinic` 里的医生不是靠口头禅撑风格，而是尽量基于可追溯的认知框架来分析问题。
 
-这很重要，因为如果底层医生只是会“像某个人说话”，那么多医生会诊最终只会变成更花哨的角色扮演。
+这件事很关键。因为如果底层医生只是会“像某个人说话”，那多医生会诊最后还是会滑回更花哨的角色扮演。
 
 ### 致谢与来源
 
 这个项目应该明确感谢 [nuwa-skill](https://github.com/alchaincyf/nuwa-skill)。
 
 `clinic` 里很多医生侧 skill 的基础思路，直接受益于 `nuwa-skill` 对“蒸馏一个人的思维方式”这件事的系统化方法。  
-如果没有这条思路，`clinic` 很容易退化成普通的人设拼贴或名人语气模仿。
+没有这条思路，`clinic` 很容易退化成人设拼贴，或者退化成名人语气模仿。
 
 更准确地说：
 
 - `nuwa-skill` 提供了医生侧的蒸馏方法论
 - `clinic` 在这个基础上继续做了主持人层、分诊规则、会诊流程、分歧保留和评测闭环
 
-所以这不是“顺手借用了几个角色”，而是明确站在前人的方法之上继续往前走。
+所以这不是“顺手借了几个角色来用”，而是很明确地站在前人的方法上继续往前做。
 
 ### 设计哲学
 
-这个项目背后的判断很简单：
+这个项目背后的判断其实不复杂：
 
 - 好的咨询，不是最快给结论
 - 好的多角色，不是热闹，而是有张力
 - 好的总结，不是把所有分歧揉平
 - 好的 skill，不是“看起来聪明”，而是能被评测、能被迭代
 
-所以 `clinic` 的重点不是“模仿人格”，而是构造一种更像真实会诊的推理秩序：
+所以 `clinic` 的重点从来不是“模仿人格”，而是尽量搭出一种更像真实会诊的推理秩序：
 
 - 主持人负责分诊、选人、组织冲突、写诊断书
 - 医生负责从各自框架出发给出不同解释
@@ -76,7 +76,7 @@
 
 `clinic` 不是“让几个 AI 假装成名人，然后轮流说几段话”。
 
-它和普通角色扮演的区别，至少有四层：
+它和普通角色扮演的差别，至少有四层：
 
 **1. 底层不是风格模仿，而是认知蒸馏**
 
@@ -85,7 +85,7 @@
 
 **2. 医生不是主角，主持人才是系统核心**
 
-- 单独的 persona skill 解决的是“一个人怎么看”
+- 单独的 persona skill 解决的是“一个人会怎么看”
 - `clinic` 新增的是主持人层：分诊、选人、组织分歧、写诊断书、开处方
 
 **3. 目标不是制造热闹，而是提高问题分辨率**
@@ -98,7 +98,7 @@
 - 仓库里不只放了 skill
 - 还放了 trigger、routing、doctor selection、end-to-end、multi-turn 的评测样本和 baseline
 
-所以更准确地说：
+所以更准确的说法是：
 
 > `nuwa-skill` 负责把“医生”蒸出来，  
 > `clinic` 负责让这些医生在一个严肃的会诊秩序里工作。
@@ -138,7 +138,7 @@ flowchart TD
 
 - `nuwa-skill` 的强项是把一个人物蒸馏成可调用的 perspective skill
 - `clinic` 的新增价值是把这些 perspective skill 编排成一个完整工作流
-- 这个工作流解决的是：
+- 这个工作流主要解决几件事：
   - 什么时候该进诊所
   - 该由谁来回答
   - 分歧怎么保留
@@ -147,7 +147,7 @@ flowchart TD
 
 ### 评测不是附属品
 
-这个项目从一开始就不是只写 skill 文件。
+这个项目从一开始就不是只想写一份 skill 文件。
 
 仓库里已经把评测拆成了几层：
 
@@ -168,7 +168,7 @@ flowchart TD
 - `PersonaEval`
 - `PersonaChat`
 
-目标不是“证明这个 skill 很厉害”，而是确保它可以被持续批评、持续改进。
+目标不是“证明这个 skill 很厉害”，而是让它能被持续批评，也能被持续改进。
 
 ### 仓库结构
 
@@ -208,7 +208,7 @@ docs/
 
 这不是一个“已经完成”的项目。
 
-它更像一个持续打磨中的框架，重点不在规模，而在质量控制：
+它更像一个还在持续打磨的框架。重点不在规模，而在质量控制：
 
 - 已有医生库
 - 已有单轮评测
@@ -216,7 +216,7 @@ docs/
 - 已经完成多轮基线分析
 - 仍在继续收紧主持人规则
 
-如果你关心的不只是“怎么写一个 skill”，而是“怎么把一个 skill 做成可以迭代的系统”，这个仓库就是给这种问题准备的。
+如果你关心的不只是“怎么写一个 skill”，而是“怎么把一个 skill 做成一个能迭代的系统”，这个仓库就是为这种问题准备的。
 
 ---
 
@@ -226,16 +226,16 @@ docs/
 
 `clinic` is a reusable consultation-style skill framework.
 
-It is not a pile of personas taking turns to speak, and it is not a decorative multi-agent demo.
+It is not a pile of personas speaking in sequence, and it is not a decorative multi-agent demo.
 
-Its core structure is:
+The real structure is:
 
 - a host that is explicitly **not** a doctor
 - a roster of doctors with genuinely different reasoning frameworks
 - a consultation flow that prioritizes exposing assumptions, preserving disagreement, and avoiding flattery
 - an evaluation stack designed for iteration
 
-In short:
+If you want the shortest version:
 
 > not a system that rushes to answers,  
 > but one that clarifies the problem before pretending to solve it.
@@ -272,18 +272,18 @@ A more accurate description is:
 - `clinic` builds the orchestration layer on top of it: triage, consultation structure, disagreement preservation, and evaluation
 
 So this repository is not merely "using a few characters."  
-It is building on a prior method and extending it into a consultation system.
+It is taking a prior method seriously and extending it into a consultation system.
 
 ### Design Philosophy
 
-This project is built on a few strong opinions:
+This project is built on a few fairly direct beliefs:
 
 - good consultation is not the fastest conclusion
 - good multi-role design is not noise, but tension
 - good synthesis does not flatten disagreement
 - good skills should be evaluated, not admired from a distance
 
-So the point of `clinic` is not just persona simulation.
+So the point of `clinic` is not persona simulation by itself.
 
 It tries to build a more disciplined reasoning order:
 
@@ -296,7 +296,7 @@ It tries to build a more disciplined reasoning order:
 
 `clinic` is not "ask several AIs to pretend to be famous thinkers and let them speak in turns."
 
-Its difference from ordinary roleplay operates at four levels:
+Its difference from ordinary roleplay shows up at four levels:
 
 **1. The base layer is distilled cognition, not style mimicry**
 
@@ -318,7 +318,7 @@ Its difference from ordinary roleplay operates at four levels:
 - this repository does not stop at skill files
 - it includes trigger, routing, doctor-selection, end-to-end, and multi-turn evaluation assets
 
-So the more accurate framing is:
+The cleaner framing is:
 
 > `nuwa-skill` distills the doctors.  
 > `clinic` puts those doctors inside a disciplined consultation system.
