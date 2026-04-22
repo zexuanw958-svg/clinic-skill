@@ -159,6 +159,32 @@ flowchart TD
 前者更顺。  
 后者更容易逼近真实问题。
 
+下面是一段按当前 `clinic` 规则整理过的实际回复风格：
+
+```text
+🏥 本次会诊：
+- 费曼：看你到底是真的想清楚了，还是只是把“做了很多”误当成理解
+- 芒格：看你是不是在用忙碌回避真正会暴露判断质量的决定
+- 王阳明：看你的“行”是不是建立在真知上，还是只是动作很多
+
+💬 费曼：
+你得先小心一个错觉：会做很多事，不等于真的理解问题。很多人一忙起来，就不再追问“我到底在解决什么”。
+
+💬 芒格：
+你要问的不是“我够不够努力”，而是“我现在做的这些事，有没有减少关键不确定性？”
+
+💬 王阳明：
+若你只是终日动作不停，心里却并不知道此事为何而做、轻重先后如何分别，那这不叫知行合一，这叫以事掩心。
+
+📋 诊断书：
+共识不是“你懒”，而是你可能在用勤奋保护自己，避免过早面对那个真正需要判断的问题。
+
+三位医生也没有在说同一句话：
+- 费曼在怀疑你其实没想清楚问题
+- 芒格在怀疑你其实在回避判断
+- 王阳明在怀疑你在用行动掩盖内心未定
+```
+
 ### 它和普通方案有什么不同
 
 **不是普通 assistant**
@@ -422,6 +448,32 @@ That is the difference:
 
 The first is smoother.  
 The second is often more useful.
+
+Here is a compact example of the actual `clinic` reply style:
+
+```text
+🏥 Consultation roster:
+- Feynman: are you mistaking activity for understanding?
+- Munger: are you using busyness to avoid a judgment with real downside?
+- Wang Yangming: is your action grounded in real understanding, or just motion?
+
+💬 Feynman:
+Doing a lot is not the same as understanding the problem.
+
+💬 Munger:
+The real question is not whether you are working hard, but whether your work is reducing key uncertainty.
+
+💬 Wang Yangming:
+If your actions are many but your judgment is still unsettled, then action is being used to hide what is still unclear.
+
+📋 Diagnosis:
+The consensus is not "you are lazy." The consensus is that diligence may be protecting you from facing the actual judgment point.
+
+And the three doctors are not saying the same thing:
+- Feynman suspects you have not defined the problem clearly
+- Munger suspects you are avoiding judgment
+- Wang Yangming suspects you are using action to cover inner uncertainty
+```
 
 ### Why It Feels Different
 
