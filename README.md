@@ -25,6 +25,23 @@
 > 不是替用户快速给答案，  
 > 而是把问题拆开，把前提暴露出来，把有价值的分歧留下来。
 
+### 医生从哪里来
+
+`clinic` 里的医生，并不是临时写出来的 AI 角色。
+
+这个项目里的医生侧 skill，主要建立在 [nuwa-skill](https://github.com/alchaincyf/nuwa-skill) 这套蒸馏方法之上。  
+`nuwa-skill` 做的不是“模仿名人说话”，而是从公开材料中提炼一个人的：
+
+- 心智模型
+- 决策启发式
+- 表达 DNA
+- 价值边界与反模式
+- 诚实边界
+
+也就是说，`clinic` 里的医生不是靠口头禅维持风格，而是尽量基于可追溯的认知框架来分析问题。
+
+这很重要，因为如果底层医生只是会“像某个人说话”，那么多医生会诊最终只会变成更花哨的角色扮演。
+
 ### 设计哲学
 
 这个项目背后的判断很简单：
@@ -40,6 +57,37 @@
 - 医生负责从各自框架出发给出不同解释
 - 如果意见不一致，系统优先保留分歧，而不是伪造共识
 - 如果问题还没想清，系统优先帮助用户看见问题，而不是抢着给建议
+
+### 它不是简单的 AI 扮演
+
+`clinic` 不是“让几个 AI 假装成名人，然后轮流说几段话”。
+
+它和普通角色扮演的区别，至少有四层：
+
+**1. 底层不是风格模仿，而是认知蒸馏**
+
+- 医生侧 skill 主要来自 `nuwa-skill`
+- 重点不是学语气，而是学判断框架、启发式和边界
+
+**2. 医生不是主角，主持人才是系统核心**
+
+- 单独的 persona skill 解决的是“一个人怎么看”
+- `clinic` 新增的是主持人层：分诊、选人、组织分歧、写诊断书、开处方
+
+**3. 目标不是制造热闹，而是提高问题分辨率**
+
+- 角色扮演常常追求“像不像”
+- `clinic` 更关心：有没有拆对前提、有没有把不同解释路径分开、有没有避免过早下结论
+
+**4. 结果不是对话截图，而是可评测的系统**
+
+- 仓库里不只放了 skill
+- 还放了 trigger、routing、doctor selection、end-to-end、multi-turn 的评测样本和 baseline
+
+所以更准确地说：
+
+> `nuwa-skill` 负责把“医生”蒸出来，  
+> `clinic` 负责让这些医生在一个严肃的会诊秩序里工作。
 
 ### How It Works
 
@@ -65,12 +113,23 @@ flowchart TD
 **不是普通 persona prompt**
 
 - 普通 persona prompt 常常只有风格差异
-- `clinic` 追求的是框架差异、尺度差异、判断张力
+- `clinic` 追求的是框架差异、判断差异、以及不同解释路径之间是否被清楚分开
 
 **不是普通 multi-agent**
 
 - 很多 multi-agent 系统只是让多个 agent 平铺直叙
 - `clinic` 把主持人层单独拿出来，专门处理分诊、冲突组织和总结失真问题
+
+**不是单独使用 `nuwa-skill`**
+
+- `nuwa-skill` 的强项是把一个人物蒸馏成可调用的 perspective skill
+- `clinic` 的新增价值是把这些 perspective skill 编排成一个完整工作流
+- 这个工作流解决的是：
+  - 什么时候该进诊所
+  - 该由谁来回答
+  - 分歧怎么保留
+  - 多轮追问后怎么不漂
+  - 怎样通过评测持续收紧规则
 
 ### 评测不是附属品
 
@@ -167,6 +226,25 @@ In short:
 > not a system that rushes to answers,  
 > but one that clarifies the problem before pretending to solve it.
 
+### Where The Doctors Come From
+
+The doctors in `clinic` are not improvised AI characters.
+
+Most doctor-side skills in this repository are built on top of [nuwa-skill](https://github.com/alchaincyf/nuwa-skill), a framework for distilling how a person thinks from public material.
+
+What `nuwa-skill` extracts is not just style. It tries to distill:
+
+- mental models
+- decision heuristics
+- expression DNA
+- value boundaries and anti-patterns
+- honest limitations
+
+That distinction matters.
+
+If the underlying doctors only "sound like" famous people, then a multi-doctor consultation is still just theatrical roleplay.  
+`clinic` depends on the stronger claim: the doctors should differ in reasoning structure, not only in tone.
+
 ### Design Philosophy
 
 This project is built on a few strong opinions:
@@ -184,6 +262,37 @@ It tries to build a more disciplined reasoning order:
 - the doctors contribute from different frameworks
 - when disagreement is real, the system preserves it instead of fabricating consensus
 - when the problem is still vague, the system prefers clarification over premature advice
+
+### This Is Not Simple AI Roleplay
+
+`clinic` is not "ask several AIs to pretend to be famous thinkers and let them speak in turns."
+
+Its difference from ordinary roleplay operates at four levels:
+
+**1. The base layer is distilled cognition, not style mimicry**
+
+- the doctor skills mostly come from `nuwa-skill`
+- the point is not catchphrases, but recurring reasoning patterns, heuristics, and boundaries
+
+**2. The doctors are not the full system; the host is**
+
+- a single persona skill answers "how would this person see the problem?"
+- `clinic` adds the orchestration layer: triage, doctor selection, disagreement management, diagnosis, and prescription
+
+**3. The objective is problem resolution quality, not theatrical realism**
+
+- roleplay systems often optimize for whether the voice feels convincing
+- `clinic` cares more about whether assumptions were exposed, interpretations were separated, and premature closure was avoided
+
+**4. The output is tied to evaluation**
+
+- this repository does not stop at skill files
+- it includes trigger, routing, doctor-selection, end-to-end, and multi-turn evaluation assets
+
+So the more accurate framing is:
+
+> `nuwa-skill` distills the doctors.  
+> `clinic` puts those doctors inside a disciplined consultation system.
 
 ### How It Works
 
@@ -209,12 +318,22 @@ flowchart TD
 **Not a normal persona prompt**
 
 - most persona prompts only change style
-- `clinic` aims for framework difference, scale difference, and meaningful tension
+- `clinic` aims for framework difference, judgment difference, and clearly separated interpretive paths
 
 **Not a normal multi-agent setup**
 
 - many multi-agent systems simply stack outputs side by side
 - `clinic` separates out the host layer to manage triage, conflict, and synthesis distortion
+
+**Not just `nuwa-skill` used directly**
+
+- `nuwa-skill` is strong at turning a person into a perspective skill
+- `clinic` adds the missing system layer:
+  - when to enter consultation
+  - who should answer
+  - how disagreement is preserved
+  - how follow-up rounds avoid drift
+  - how the whole workflow is evaluated and improved
 
 ### Evaluation Is Part of the Product
 
