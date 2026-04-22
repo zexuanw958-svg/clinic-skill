@@ -1,0 +1,12 @@
+{"id":"trigger-001","input":"帮我看看这段 Python 报错为什么会发生","should_trigger":false,"reason":"普通编程求助，不需要多医生会诊。"}
+{"id":"trigger-002","input":"我想问问，我总觉得只要努力就一定能成功，这个想法对吗","should_trigger":true,"reason":"明确观点，适合审视模式。"}
+{"id":"trigger-003","input":"会诊一下：我要不要从大厂离职去创业","should_trigger":true,"reason":"显式会诊词，且是决策问题。"}
+{"id":"trigger-004","input":"帮我想想今天晚饭吃什么","should_trigger":false,"reason":"过于日常且低价值，不需要诊所流程。"}
+{"id":"trigger-005","input":"我很纠结，要不要继续读博还是直接工作","should_trigger":true,"reason":"典型决策问题。"}
+{"id":"trigger-006","input":"怎么看现在很多人把焦虑全怪原生家庭","should_trigger":true,"reason":"开放讨论，适合多视角分析。"}
+{"id":"trigger-007","input":"帮我写个小红书标题","should_trigger":false,"reason":"这是具体创作执行任务，应路由到垂直 skill。"}
+{"id":"trigger-008","input":"我知道该做什么但就是不做，是不是我其实根本不想要那个结果","should_trigger":true,"reason":"求助型自我分析，适合诊所或进一步引导到 dbs-action。"}
+{"id":"trigger-009","input":"我想问问你，明天上海天气怎么样","should_trigger":false,"reason":"事实查询，不属于诊所。"}
+{"id":"trigger-010","input":"让芒格和费曼来看看：我是不是把勤奋当成了思考的替代品","should_trigger":true,"reason":"显式点名医生，明确会诊场景。"}
+{"id":"trigger-011","input":"能不能帮我看看这份合同有没有风险","should_trigger":false,"reason":"这是专业垂直分析任务，默认不该先走诊所。"}
+{"id":"trigger-012","input":"我觉得现在大家讲公平，其实只是想把失败怪给制度，这么看偏了吗","should_trigger":true,"reason":"有明确判断且带社会哲学色彩，适合审视。"}

@@ -1,0 +1,10 @@
+{"id":"routing-001","input":"我觉得一个人只要足够自律，就不需要情绪价值。这个判断站得住吗","expected_mode":"审视","reason":"明确观点，核心任务是拆前提。"}
+{"id":"routing-002","input":"我现在特别迷茫，不知道该不该回老家，也不知道自己到底想要什么","expected_mode":"求助","reason":"没有清晰选项结构，核心是求助与梳理。"}
+{"id":"routing-003","input":"我要不要接受这份薪资更高但更卷的 offer","expected_mode":"决策","reason":"有清晰选项和取舍。"}
+{"id":"routing-004","input":"聊聊为什么很多人越努力越焦虑","expected_mode":"开放","reason":"主题讨论，不是个人决策。"}
+{"id":"routing-005","input":"我觉得我不该和父母划清边界，否则就是不孝，这个想法哪里有问题","expected_mode":"审视","reason":"明确观点，需要拆隐含前提。"}
+{"id":"routing-006","input":"我很纠结，一方面想创业，一方面又怕失去稳定收入","expected_mode":"求助","reason":"表面像决策，但信息还不足，先需要梳理内部冲突。"}
+{"id":"routing-007","input":"A 方案现金流更稳，B 方案上限更高，我该选哪个","expected_mode":"决策","reason":"已经成型的选项比较。"}
+{"id":"routing-008","input":"怎么看第一性原理被滥用成一种表演","expected_mode":"开放","reason":"讨论概念与现象。"}
+{"id":"routing-009","input":"我认为人际关系里真诚比技巧重要，这是不是一种自我安慰","expected_mode":"审视","reason":"观点审查。"}
+{"id":"routing-010","input":"我想不清楚为什么我明明不喜欢现在的工作却不敢走","expected_mode":"求助","reason":"核心是自我理解，不是现成选项比较。"}
