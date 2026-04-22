@@ -42,6 +42,20 @@
 
 这很重要，因为如果底层医生只是会“像某个人说话”，那么多医生会诊最终只会变成更花哨的角色扮演。
 
+### 致谢与来源
+
+这个项目应该明确感谢 [nuwa-skill](https://github.com/alchaincyf/nuwa-skill)。
+
+`clinic` 里很多医生侧 skill 的基础思路，直接受益于 `nuwa-skill` 对“蒸馏一个人的思维方式”这件事的系统化方法。  
+如果没有这条思路，`clinic` 很容易退化成普通的人设拼贴或名人语气模仿。
+
+更准确地说：
+
+- `nuwa-skill` 提供了医生侧的蒸馏方法论
+- `clinic` 在这个基础上继续做了主持人层、分诊规则、会诊流程、分歧保留和评测闭环
+
+所以这不是“顺手借用了几个角色”，而是明确站在前人的方法之上继续往前走。
+
 ### 设计哲学
 
 这个项目背后的判断很简单：
@@ -244,6 +258,21 @@ That distinction matters.
 
 If the underlying doctors only "sound like" famous people, then a multi-doctor consultation is still just theatrical roleplay.  
 `clinic` depends on the stronger claim: the doctors should differ in reasoning structure, not only in tone.
+
+### Acknowledgment
+
+This project should explicitly acknowledge [nuwa-skill](https://github.com/alchaincyf/nuwa-skill).
+
+Much of the foundation for the doctor-side skills in `clinic` benefits directly from `nuwa-skill`'s method for distilling how a person thinks.  
+Without that foundation, `clinic` would be much more likely to collapse into ordinary persona stacking or voice imitation.
+
+A more accurate description is:
+
+- `nuwa-skill` provides the doctor-distillation methodology
+- `clinic` builds the orchestration layer on top of it: triage, consultation structure, disagreement preservation, and evaluation
+
+So this repository is not merely "using a few characters."  
+It is building on a prior method and extending it into a consultation system.
 
 ### Design Philosophy
 
