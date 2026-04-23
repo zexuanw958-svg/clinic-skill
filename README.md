@@ -115,9 +115,12 @@
 
 ### How It Works
 
+第一步不是直接开始会诊，而是先判断：**这个问题到底适不适合进入诊所**。  
+如果不适合，就应该回到普通 assistant 或更垂直的 skill，而不是硬拉进来。
+
 ```mermaid
 flowchart TD
-    A[用户问题] --> B{是否适合进入诊所}
+    A[用户问题] --> B{触发判断: 是否适合进入诊所}
     B -- 否 --> C[转回普通助理或垂直 skill]
     B -- 是 --> D[主持人分诊]
     D --> E[判断模式: 审视 / 求助 / 决策 / 开放]
@@ -426,9 +429,14 @@ The cleaner framing is:
 
 ### How It Works
 
+The first step is not consultation.  
+It is a gate: **should this input enter Clinic at all?**
+
+If the answer is no, it should route back to a normal assistant or a more appropriate vertical skill.
+
 ```mermaid
 flowchart TD
-    A[User input] --> B{Should this enter Clinic?}
+    A[User input] --> B{Trigger gate: should this enter Clinic?}
     B -- No --> C[Route back to normal assistant or vertical skill]
     B -- Yes --> D[Host triage]
     D --> E[Choose mode: review / help / decision / open discussion]
