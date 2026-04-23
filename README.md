@@ -25,6 +25,30 @@
 > 不是替用户快速给答案，  
 > 而是把问题拆开，把前提暴露出来，把有价值的分歧留下来。
 
+### 为什么会做这个
+
+这个项目不是从“我想做个 AI 角色扮演”开始的。
+
+更早的起点其实很简单：我是个想法很多的人。  
+同一件事，我脑子里经常会同时跑出几种互相不一样的判断。但这些判断，大多数时候没有地方真的展开说。不是因为没人能听懂，而是因为现实里很少有人既愿意听，又能给出足够有说服力的回应。
+
+时间久了，这些想法就只能在脑子里自己打转。
+
+后来我开始想，能不能做一个东西，让那些我真正敬佩的人来评价我的观点？
+
+这个项目最早一版的名字其实叫 **“擂台”**。  
+当时的直觉是：既然想法需要被检验，那就把它们放上擂台。
+
+但很快我发现，生活里不是所有问题都适合拿来“打”。  
+有些时候你不是想被击败，也不是想赢，而是根本不知道该怎么办，只想先有人帮你看看问题到底出在哪。
+
+所以它后来变成了 **“诊所”**。
+
+这个名字更接近我真正想做的事：
+
+- 不是只挑战你的想法
+- 还要在你没想清楚的时候，帮你分诊、拆解、给一点方向
+
 ### 医生从哪里来
 
 `clinic` 里的医生，并不是临时写出来的 AI 角色。
@@ -41,20 +65,6 @@
 所以，`clinic` 里的医生不是靠口头禅撑风格，而是尽量基于可追溯的认知框架来分析问题。
 
 这件事很关键。因为如果底层医生只是会“像某个人说话”，那多医生会诊最后还是会滑回更花哨的角色扮演。
-
-### 致谢与来源
-
-这个项目应该明确感谢 [nuwa-skill](https://github.com/alchaincyf/nuwa-skill)。
-
-`clinic` 里很多医生侧 skill 的基础思路，直接受益于 `nuwa-skill` 对“蒸馏一个人的思维方式”这件事的系统化方法。  
-没有这条思路，`clinic` 很容易退化成人设拼贴，或者退化成名人语气模仿。
-
-更准确地说：
-
-- `nuwa-skill` 提供了医生侧的蒸馏方法论
-- `clinic` 在这个基础上继续做了主持人层、分诊规则、会诊流程、分歧保留和评测闭环
-
-所以这不是“顺手借了几个角色来用”，而是很明确地站在前人的方法上继续往前做。
 
 ### 设计哲学
 
@@ -286,6 +296,20 @@ docs/
 
 如果你关心的不只是“怎么写一个 skill”，而是“怎么把一个 skill 做成一个能迭代的系统”，这个仓库就是为这种问题准备的。
 
+### 鸣谢
+
+这个项目应该明确感谢 [nuwa-skill](https://github.com/alchaincyf/nuwa-skill)。
+
+`clinic` 里很多医生侧 skill 的基础思路，直接受益于 `nuwa-skill` 对“蒸馏一个人的思维方式”这件事的系统化方法。  
+没有这条思路，`clinic` 很容易退化成人设拼贴，或者退化成名人语气模仿。
+
+更准确地说：
+
+- `nuwa-skill` 提供了医生侧的蒸馏方法论
+- `clinic` 在这个基础上继续做了主持人层、分诊规则、会诊流程、分歧保留和评测闭环
+
+所以这不是“顺手借了几个角色来用”，而是很明确地站在前人的方法上继续往前做。
+
 ---
 
 ## English
@@ -308,6 +332,30 @@ If you want the shortest version:
 > not a system that rushes to answers,  
 > but one that clarifies the problem before pretending to solve it.
 
+### Why I Built This
+
+This project did not start from "I want to build an AI roleplay system."
+
+The real starting point was simpler than that: I am the kind of person who often has several competing ways of thinking about the same thing.  
+In practice, those lines of thought usually have nowhere to go. Not because nobody can understand them, but because very few people are both interested enough to stay with them and sharp enough to respond in a way that actually moves the problem forward.
+
+So the thoughts just keep circling in my head.
+
+At some point, a more specific idea appeared: what if I could build a project where the people I genuinely respect could "look at" my ideas with me?
+
+The first version of this project was actually called **"Arena"**.  
+At the time that felt natural: if ideas need to be tested, put them in the ring.
+
+But pretty quickly I realized that not every problem in life wants a fight.  
+Sometimes you do not want to win or lose an argument. Sometimes you are simply stuck and want someone to help you see what the problem even is.
+
+That is why it became **"Clinic."**
+
+That name is much closer to what I actually wanted:
+
+- not only to challenge ideas
+- but also to examine them, diagnose them, and sometimes offer direction
+
 ### Where The Doctors Come From
 
 The doctors in `clinic` are not improvised AI characters.
@@ -326,21 +374,6 @@ That distinction matters.
 
 If the underlying doctors only "sound like" famous people, then a multi-doctor consultation is still just theatrical roleplay.  
 `clinic` depends on the stronger claim: the doctors should differ in reasoning structure, not only in tone.
-
-### Acknowledgment
-
-This project should explicitly acknowledge [nuwa-skill](https://github.com/alchaincyf/nuwa-skill).
-
-Much of the foundation for the doctor-side skills in `clinic` benefits directly from `nuwa-skill`'s method for distilling how a person thinks.  
-Without that foundation, `clinic` would be much more likely to collapse into ordinary persona stacking or voice imitation.
-
-A more accurate description is:
-
-- `nuwa-skill` provides the doctor-distillation methodology
-- `clinic` builds the orchestration layer on top of it: triage, consultation structure, disagreement preservation, and evaluation
-
-So this repository is not merely "using a few characters."  
-It is taking a prior method seriously and extending it into a consultation system.
 
 ### Design Philosophy
 
@@ -576,3 +609,18 @@ It is a framework under disciplined iteration:
 - host rules still being tightened
 
 If you care not only about how to write a skill, but how to turn one into an iterated system, this repository is for that problem.
+
+### Acknowledgment
+
+This project should explicitly acknowledge [nuwa-skill](https://github.com/alchaincyf/nuwa-skill).
+
+Much of the foundation for the doctor-side skills in `clinic` benefits directly from `nuwa-skill`'s method for distilling how a person thinks.  
+Without that foundation, `clinic` would be much more likely to collapse into ordinary persona stacking or voice imitation.
+
+A more accurate description is:
+
+- `nuwa-skill` provides the doctor-distillation methodology
+- `clinic` builds the orchestration layer on top of it: triage, consultation structure, disagreement preservation, and evaluation
+
+So this repository is not merely "using a few characters."  
+It is taking a prior method seriously and extending it into a consultation system.
