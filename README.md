@@ -198,30 +198,28 @@ flowchart TD
 - 王阳明在怀疑你在用行动掩盖内心未定
 ```
 
-### 更多实例和证据
+### 真实输出
 
-一个例子不够。这个项目要站得住，必须能被具体案例反复检验。
+为了避免只在 README 里放加工过的总结，这里不摘录评测结论。
 
-我把更完整的示例放在 [docs/examples.md](docs/examples.md)，目前包括：
+想看它到底有没有用，直接看完整原始输出：
 
-- 勤奋是不是替代了思考
-- “边界感”是不是被滥用了
-- 大厂 offer 还是创业公司 offer
+- [live eval 原始记录：普通 assistant vs clinic](evals/results/live-2026-04-26.md)
 
-每个例子都按同一套结构展开：
+里面保留了三组完整对比：
 
 - 原始用户问题
-- 普通 assistant 的典型回答倾向
-- `clinic` 应该如何分诊和选医生
-- 它到底多保留了什么分歧、竞争解释或验证点
+- 普通 assistant 完整输出
+- `clinic` 完整输出
+- 简单评分和局限说明
 
-更硬的评测证据在 `evals/` 里：
+其他评测材料：
 
-- [evals/results/live-2026-04-26.md](evals/results/live-2026-04-26.md)
 - [evals/clinic/host_failure_cases.jsonl](evals/clinic/host_failure_cases.jsonl)
 - [evals/clinic/multi_turn.jsonl](evals/clinic/multi_turn.jsonl)
 - [evals/rubric.md](evals/rubric.md)
 - [evals/live/README.md](evals/live/README.md)
+- [docs/examples.md](docs/examples.md)
 
 ### 它和普通方案有什么不同
 
@@ -541,30 +539,28 @@ And the three doctors are not saying the same thing:
 - Wang Yangming suspects you are using action to cover inner uncertainty
 ```
 
-### More Examples And Evidence
+### Raw Outputs
 
-One example is not enough. If this project is serious, it should survive repeated concrete cases.
+To avoid putting only processed summaries in the README, this section does not excerpt the evaluation conclusion.
 
-More examples are collected in [docs/examples.md](docs/examples.md), including:
+If you want to judge whether this works, read the full raw outputs directly:
 
-- diligence as a substitute for thinking
-- whether "boundaries" are being overused
-- choosing between a big-company offer and a startup offer
+- [live eval raw record: normal assistant vs clinic](evals/results/live-2026-04-26.md)
 
-Each example shows:
+It includes three complete comparisons:
 
 - the original user input
-- the typical normal-assistant tendency
-- the expected `clinic` triage and doctor selection
-- what disagreement, competing explanation, or validation point `clinic` preserves
+- full normal assistant output
+- full `clinic` output
+- simple scores and limitations
 
-The harder evaluation assets are under `evals/`:
+Other evaluation assets:
 
-- [evals/results/live-2026-04-26.md](evals/results/live-2026-04-26.md)
 - [evals/clinic/host_failure_cases.jsonl](evals/clinic/host_failure_cases.jsonl)
 - [evals/clinic/multi_turn.jsonl](evals/clinic/multi_turn.jsonl)
 - [evals/rubric.md](evals/rubric.md)
 - [evals/live/README.md](evals/live/README.md)
+- [docs/examples.md](docs/examples.md)
 
 ### Why It Feels Different
 
