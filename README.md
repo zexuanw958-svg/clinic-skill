@@ -217,6 +217,7 @@ flowchart TD
 
 更硬的评测证据在 `evals/` 里：
 
+- [evals/results/live-2026-04-26.md](evals/results/live-2026-04-26.md)
 - [evals/clinic/host_failure_cases.jsonl](evals/clinic/host_failure_cases.jsonl)
 - [evals/clinic/multi_turn.jsonl](evals/clinic/multi_turn.jsonl)
 - [evals/rubric.md](evals/rubric.md)
@@ -559,6 +560,7 @@ Each example shows:
 
 The harder evaluation assets are under `evals/`:
 
+- [evals/results/live-2026-04-26.md](evals/results/live-2026-04-26.md)
 - [evals/clinic/host_failure_cases.jsonl](evals/clinic/host_failure_cases.jsonl)
 - [evals/clinic/multi_turn.jsonl](evals/clinic/multi_turn.jsonl)
 - [evals/rubric.md](evals/rubric.md)
