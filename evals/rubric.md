@@ -119,6 +119,17 @@ Scoring:
 - `1`: preserves some but drops an important distinction
 - `0`: compresses away the actual issue
 
+### 11. Host Failure Resistance
+
+Question:
+Does the host avoid predictable synthesis failures under adversarial or ambiguous cases?
+
+Scoring:
+
+- `2`: explicitly avoids the target failure and preserves the important distinction
+- `1`: partially avoids the failure but still softens or blurs one key distinction
+- `0`: falls into the target failure mode
+
 ## Failure Modes to Watch
 
 - Over-triggering on generic help-seeking language
@@ -130,6 +141,12 @@ Scoring:
 - Forgetting what the user was actually asking after a follow-up turn
 - Changing to the wrong mode after the user clarifies or narrows the issue
 - Compressing multi-turn context into generic therapy language
+- Creating fake consensus where doctors actually disagreed
+- Turning competing explanations into a single smooth story
+- Ignoring the latest user-provided evidence
+- Turning open discussion into a forced conclusion
+- Turning help-seeking into a generic action checklist
+- Replacing a decision framework with "follow your preference"
 
 ## Output Recording Template
 
@@ -149,4 +166,5 @@ Suggested columns:
 - `multi_turn_coherence_score`
 - `mode_transition_score`
 - `context_compression_score`
+- `host_failure_resistance_score`
 - `notes`

@@ -17,6 +17,7 @@ The suite evaluates six layers:
 4. `end_to_end`: whether the full consultation is useful without flattening disagreement
 5. `multi_turn`: whether follow-up rounds preserve intent, role separation, and the right mode
 6. `live`: whether the current skill produces better real outputs than a plain assistant on the same cases
+7. `host_failure`: whether the host avoids predictable synthesis failures
 
 ## External References
 
@@ -43,6 +44,8 @@ These are not mirrored into the repository. They are used as reference sources w
   - Full-chain consultation eval set
 - `clinic/multi_turn.jsonl`
   - Follow-up and context-compression eval set
+- `clinic/host_failure_cases.jsonl`
+  - Host-side failure cases: fake consensus, over-summary, blurred competing explanations, ignored latest turn, and mode flattening
 - `live/README.md`
   - Live eval protocol for fixed-model runs and baseline comparison
 - `results/live-template.md`
@@ -60,6 +63,7 @@ We are trying to answer narrower questions:
 - Does it preserve disagreement rather than collapsing it into bland synthesis?
 - Does it produce actionable output when action is appropriate?
 - Does it remain coherent after several rounds of follow-up?
+- Does the host resist flattening, fake consensus, and premature closure?
 
 ## Recommended Process
 

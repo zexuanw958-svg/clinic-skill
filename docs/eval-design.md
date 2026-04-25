@@ -101,6 +101,24 @@ Primary questions:
 - Does the mode stay stable when it should, and change when it should?
 - Does summary compression keep the actual conflict instead of washing it out?
 
+### Host Failure Set
+
+Goal:
+Stress-test the host, not the doctors.
+
+Primary question:
+Does the host preserve the useful conflict after doctor outputs return?
+
+Target failures:
+
+- fake consensus
+- over-summary
+- blurred competing explanations
+- ignored latest-turn evidence
+- open discussion collapsed into a single judgment
+- help-seeking converted into a generic action list
+- decision problems replaced with preference advice
+
 ### Live Eval
 
 Goal:
