@@ -126,7 +126,7 @@ flowchart TD
     D --> E[判断模式: 审视 / 求助 / 决策 / 开放]
     E --> F[选 2-3 位医生]
     F --> G[并行会诊]
-    G --> H[诊断书: 共识 / 分歧 / 盲区]
+    G --> H[诊断书: 共同点 / 关键分歧 / 竞争解释 / 优先验证点]
     H --> I[处方或继续追问]
 ```
 
@@ -197,6 +197,30 @@ flowchart TD
 - 芒格在怀疑你其实在回避判断
 - 王阳明在怀疑你在用行动掩盖内心未定
 ```
+
+### 更多实例和证据
+
+一个例子不够。这个项目要站得住，必须能被具体案例反复检验。
+
+我把更完整的示例放在 [docs/examples.md](docs/examples.md)，目前包括：
+
+- 勤奋是不是替代了思考
+- “边界感”是不是被滥用了
+- 大厂 offer 还是创业公司 offer
+
+每个例子都按同一套结构展开：
+
+- 原始用户问题
+- 普通 assistant 的典型回答倾向
+- `clinic` 应该如何分诊和选医生
+- 它到底多保留了什么分歧、竞争解释或验证点
+
+更硬的评测证据在 `evals/` 里：
+
+- [evals/clinic/host_failure_cases.jsonl](evals/clinic/host_failure_cases.jsonl)
+- [evals/clinic/multi_turn.jsonl](evals/clinic/multi_turn.jsonl)
+- [evals/rubric.md](evals/rubric.md)
+- [evals/live/README.md](evals/live/README.md)
 
 ### 它和普通方案有什么不同
 
@@ -442,7 +466,7 @@ flowchart TD
     D --> E[Choose mode: review / help / decision / open discussion]
     E --> F[Select 2-3 doctors]
     F --> G[Parallel consultation]
-    G --> H[Diagnosis: consensus / disagreement / blind spots]
+    G --> H[Diagnosis: common ground / key disagreement / competing explanations / priority validation]
     H --> I[Prescription or follow-up]
 ```
 
@@ -515,6 +539,30 @@ And the three doctors are not saying the same thing:
 - Munger suspects you are avoiding judgment
 - Wang Yangming suspects you are using action to cover inner uncertainty
 ```
+
+### More Examples And Evidence
+
+One example is not enough. If this project is serious, it should survive repeated concrete cases.
+
+More examples are collected in [docs/examples.md](docs/examples.md), including:
+
+- diligence as a substitute for thinking
+- whether "boundaries" are being overused
+- choosing between a big-company offer and a startup offer
+
+Each example shows:
+
+- the original user input
+- the typical normal-assistant tendency
+- the expected `clinic` triage and doctor selection
+- what disagreement, competing explanation, or validation point `clinic` preserves
+
+The harder evaluation assets are under `evals/`:
+
+- [evals/clinic/host_failure_cases.jsonl](evals/clinic/host_failure_cases.jsonl)
+- [evals/clinic/multi_turn.jsonl](evals/clinic/multi_turn.jsonl)
+- [evals/rubric.md](evals/rubric.md)
+- [evals/live/README.md](evals/live/README.md)
 
 ### Why It Feels Different
 
