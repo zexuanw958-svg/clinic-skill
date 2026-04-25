@@ -2,6 +2,8 @@
 
 **A reusable consultation framework for multi-perspective reasoning, not a prompt pile.**
 
+**诊所 / Clinic Skill 是一个用于 Codex、Claude 等 AI agent 环境的多医生会诊式 skill，聚焦 multi-agent consultation、persona reasoning 和 live eval。**
+
 [中文](#中文) | [English](#english)
 
 ---
