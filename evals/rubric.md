@@ -119,6 +119,16 @@ Scoring:
 - `1`: preserves some but drops an important distinction
 - `0`: compresses away the actual issue
 
+Required state fields:
+
+- current mode
+- original question
+- confirmed key information
+- competing explanations
+- unresolved disagreement
+- user-named doctors
+- latest-turn weight changes
+
 ### 11. Host Failure Resistance
 
 Question:

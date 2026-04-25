@@ -100,6 +100,7 @@ Primary questions:
 - Does the host preserve the real thread of the conversation?
 - Does the mode stay stable when it should, and change when it should?
 - Does summary compression keep the actual conflict instead of washing it out?
+- Does the structured state preserve original question, confirmed facts, competing explanations, unresolved disagreement, named doctors, and latest-turn weight changes?
 
 ### Host Failure Set
 
