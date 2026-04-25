@@ -101,6 +101,19 @@ Primary questions:
 - Does the mode stay stable when it should, and change when it should?
 - Does summary compression keep the actual conflict instead of washing it out?
 
+### Live Eval
+
+Goal:
+Verify real model behavior instead of only checking the design on paper.
+
+Primary questions:
+
+- Does `clinic` outperform a plain assistant on the same input?
+- Are selected doctors, doctor outputs, host synthesis, and final prescription all recoverable from the trace?
+- Did a skill change improve actual output quality or just make the README sound more convincing?
+
+Live eval runs should fix the model, commit, prompt environment, case set, and baseline output. Store the result under `evals/results/` using the live template.
+
 ## Initial Evaluation Policy
 
 For now, evaluate manually or with lightweight LLM-as-judge support.
@@ -115,4 +128,4 @@ Next additions should include:
 2. More borderline routing cases
 3. Cases where user-named doctors conflict with host recommendations
 4. Multi-turn follow-up cases
-5. A result template under `evals/results/`
+5. More live traces across model versions

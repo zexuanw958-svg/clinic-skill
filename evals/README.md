@@ -9,13 +9,14 @@ The suite is intentionally hybrid:
 
 ## Scope
 
-The suite evaluates four layers:
+The suite evaluates six layers:
 
 1. `trigger`: should `clinic` activate at all
 2. `routing`: which mode should the host choose
 3. `doctor_selection`: which doctors should be selected and why
 4. `end_to_end`: whether the full consultation is useful without flattening disagreement
 5. `multi_turn`: whether follow-up rounds preserve intent, role separation, and the right mode
+6. `live`: whether the current skill produces better real outputs than a plain assistant on the same cases
 
 ## External References
 
@@ -42,6 +43,10 @@ These are not mirrored into the repository. They are used as reference sources w
   - Full-chain consultation eval set
 - `clinic/multi_turn.jsonl`
   - Follow-up and context-compression eval set
+- `live/README.md`
+  - Live eval protocol for fixed-model runs and baseline comparison
+- `results/live-template.md`
+  - Result template for recording live traces and failures
 
 ## Evaluation Philosophy
 
@@ -63,6 +68,7 @@ We are trying to answer narrower questions:
 3. Record results in a spreadsheet or future `results/` directory.
 4. Iterate the skill.
 5. Re-run the same suite before adding new cases.
+6. For meaningful releases, run the live eval protocol and save traces under `results/`.
 
 ## Notes
 
