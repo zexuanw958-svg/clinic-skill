@@ -111,23 +111,6 @@
 > `nuwa-skill` 负责把"医生"蒸出来，
 > `clinic` 负责让这些医生在一个严肃的会诊秩序里工作。
 
-### How It Works
-
-第一步不是直接开始会诊，而是先判断：**这个问题到底适不适合进入诊所**。
-如果不适合，就应该回到普通 assistant 或更垂直的 skill，而不是硬拉进来。
-
-```mermaid
-flowchart TD
-    A[用户问题] --> B{触发判断: 是否适合进入诊所}
-    B -- 否 --> C[转回普通助理或垂直 skill]
-    B -- 是 --> D[主持人分诊]
-    D --> E[判断模式: 审视 / 求助 / 决策 / 开放]
-    E --> F[选 2-3 位医生]
-    F --> G[并行会诊]
-    G --> H[诊断书: 共同点 / 关键分歧 / 竞争解释 / 优先验证点]
-    H --> I[处方或继续追问]
-```
-
 ### 真实输出
 
 为了避免只在 README 里放加工过的总结，这里不摘录评测结论。
@@ -150,6 +133,23 @@ flowchart TD
 - [evals/rubric.md](evals/rubric.md)
 - [evals/live/README.md](evals/live/README.md)
 - [docs/examples.md](docs/examples.md)
+
+### How It Works
+
+第一步不是直接开始会诊，而是先判断：**这个问题到底适不适合进入诊所**。
+如果不适合，就应该回到普通 assistant 或更垂直的 skill，而不是硬拉进来。
+
+```mermaid
+flowchart TD
+    A[用户问题] --> B{触发判断: 是否适合进入诊所}
+    B -- 否 --> C[转回普通助理或垂直 skill]
+    B -- 是 --> D[主持人分诊]
+    D --> E[判断模式: 审视 / 求助 / 决策 / 开放]
+    E --> F[选 2-3 位医生]
+    F --> G[并行会诊]
+    G --> H[诊断书: 共同点 / 关键分歧 / 竞争解释 / 优先验证点]
+    H --> I[处方或继续追问]
+```
 
 ### 它和普通方案有什么不同
 
@@ -396,24 +396,6 @@ The cleaner framing:
 > `nuwa-skill` distills the doctors.
 > `clinic` puts those doctors inside a disciplined consultation system.
 
-### How It Works
-
-The first step is not consultation. It is a gate: **should this input enter Clinic at all?**
-
-If the answer is no, it routes back to a normal assistant or a more appropriate vertical skill.
-
-```mermaid
-flowchart TD
-    A[User input] --> B{Trigger gate: should this enter Clinic?}
-    B -- No --> C[Route back to normal assistant or vertical skill]
-    B -- Yes --> D[Host triage]
-    D --> E[Choose mode: review / help / decision / open discussion]
-    E --> F[Select 2-3 doctors]
-    F --> G[Parallel consultation]
-    G --> H[Diagnosis: common ground / key disagreement / competing explanations / priority validation]
-    H --> I[Prescription or follow-up]
-```
-
 ### Raw Outputs
 
 To avoid putting only processed summaries in the README, this section does not excerpt evaluation conclusions.
@@ -436,6 +418,24 @@ Other evaluation assets:
 - [evals/rubric.md](evals/rubric.md)
 - [evals/live/README.md](evals/live/README.md)
 - [docs/examples.md](docs/examples.md)
+
+### How It Works
+
+The first step is not consultation. It is a gate: **should this input enter Clinic at all?**
+
+If the answer is no, it routes back to a normal assistant or a more appropriate vertical skill.
+
+```mermaid
+flowchart TD
+    A[User input] --> B{Trigger gate: should this enter Clinic?}
+    B -- No --> C[Route back to normal assistant or vertical skill]
+    B -- Yes --> D[Host triage]
+    D --> E[Choose mode: review / help / decision / open discussion]
+    E --> F[Select 2-3 doctors]
+    F --> G[Parallel consultation]
+    G --> H[Diagnosis: common ground / key disagreement / competing explanations / priority validation]
+    H --> I[Prescription or follow-up]
+```
 
 ### Why It Feels Different
 
