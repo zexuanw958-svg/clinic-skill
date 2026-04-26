@@ -214,6 +214,9 @@ flowchart TD
 clinic/
   SKILL.md                  # 主持人规则与会诊流程
 
+memory/
+  *.md                      # 可审计病历系统模板，本地运行时可积累用户习惯
+
 doctors/
   <doctor>/SKILL.md         # 医生侧的 persona skill
 
@@ -485,6 +488,9 @@ The goal is to make it criticizable, measurable, and improvable.
 ```text
 clinic/
   SKILL.md                  # host rules and orchestration logic
+
+memory/
+  *.md                      # auditable memory templates for local user habits and consultation history
 
 doctors/
   <doctor>/SKILL.md         # doctor-side persona skills
