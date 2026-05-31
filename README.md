@@ -13,7 +13,7 @@
 - **License:** [MIT](LICENSE)
 - **Maintainer:** primary maintainer-led project
 - **Current baseline:** `0.1.0` public skill and eval baseline
-- **Maintenance docs:** [Contributing](CONTRIBUTING.md), [Roadmap](ROADMAP.md), [Security](SECURITY.md), [Changelog](CHANGELOG.md)
+- **Maintenance docs:** [Installation](docs/installation.md), [Contributing](CONTRIBUTING.md), [Roadmap](ROADMAP.md), [Security](SECURITY.md), [Changelog](CHANGELOG.md)
 - **Core evidence:** host rules, doctor registry, eval cases, live eval traces, and auditable memory templates are all kept in this repository.
 
 `clinic-skill` is early-stage, but it is maintained as an evaluation-driven open-source project rather than a one-off prompt dump.
@@ -31,6 +31,7 @@
 - 评测样本：`evals/clinic/*.jsonl`
 - live eval 原始记录：`evals/results/`
 - 可审计病历模板：`memory/`
+- 安装说明：`docs/installation.md`
 - 维护入口：`CONTRIBUTING.md`、`ROADMAP.md`、`CHANGELOG.md`、`SECURITY.md`
 
 接下来的维护重点不是"堆更多医生"，而是让它更容易安装、复现、评测和发布。
@@ -267,6 +268,7 @@ evals/
   results/*.md              # 设计级 baseline 结果
 
 docs/
+  installation.md           # 安装与运行说明
   eval-design.md            # 评测设计说明
   release-checklist.md      # 发布前检查清单
 
@@ -339,6 +341,7 @@ The repository already includes:
 - evaluation cases: `evals/clinic/*.jsonl`
 - raw live eval traces: `evals/results/`
 - auditable memory templates: `memory/`
+- installation notes: `docs/installation.md`
 - maintainer entry points: `CONTRIBUTING.md`, `ROADMAP.md`, `CHANGELOG.md`, and `SECURITY.md`
 
 The next maintenance focus is not adding more doctors. It is making the project easier to install, reproduce, evaluate, and release.
@@ -579,6 +582,7 @@ evals/
   results/*.md              # design-level baseline results
 
 docs/
+  installation.md           # installation and runtime notes
   eval-design.md            # evaluation design notes
   release-checklist.md      # pre-release checklist
 
