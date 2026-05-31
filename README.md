@@ -8,7 +8,32 @@
 
 ---
 
+## Project Signals
+
+- **License:** [MIT](LICENSE)
+- **Maintainer:** primary maintainer-led project
+- **Current baseline:** `0.1.0` public skill and eval baseline
+- **Maintenance docs:** [Contributing](CONTRIBUTING.md), [Roadmap](ROADMAP.md), [Security](SECURITY.md), [Changelog](CHANGELOG.md)
+- **Core evidence:** host rules, doctor registry, eval cases, live eval traces, and auditable memory templates are all kept in this repository.
+
+`clinic-skill` is early-stage, but it is maintained as an evaluation-driven open-source project rather than a one-off prompt dump.
+
 ## 中文
+
+### 当前维护状态
+
+`clinic-skill` 当前处在 `0.1.x` 公开维护阶段。
+
+已经具备的东西：
+
+- 主持人规则：`clinic/SKILL.md`
+- 医生注册表：`doctors/`
+- 评测样本：`evals/clinic/*.jsonl`
+- live eval 原始记录：`evals/results/`
+- 可审计病历模板：`memory/`
+- 维护入口：`CONTRIBUTING.md`、`ROADMAP.md`、`CHANGELOG.md`、`SECURITY.md`
+
+接下来的维护重点不是"堆更多医生"，而是让它更容易安装、复现、评测和发布。
 
 ### 这是什么
 
@@ -243,6 +268,17 @@ evals/
 
 docs/
   eval-design.md            # 评测设计说明
+  release-checklist.md      # 发布前检查清单
+
+.github/
+  ISSUE_TEMPLATE/           # bug、eval、docs 维护入口
+  PULL_REQUEST_TEMPLATE.md  # PR 自检模板
+
+CHANGELOG.md                # 版本记录
+CONTRIBUTING.md             # 贡献指南
+ROADMAP.md                  # 维护路线图
+SECURITY.md                 # 安全与隐私报告规则
+LICENSE                     # MIT license
 ```
 
 ### 适合什么，不适合什么
@@ -291,6 +327,21 @@ docs/
 ---
 
 ## English
+
+### Current Maintenance Status
+
+`clinic-skill` is currently in the `0.1.x` public maintenance stage.
+
+The repository already includes:
+
+- host rules: `clinic/SKILL.md`
+- doctor registry: `doctors/`
+- evaluation cases: `evals/clinic/*.jsonl`
+- raw live eval traces: `evals/results/`
+- auditable memory templates: `memory/`
+- maintainer entry points: `CONTRIBUTING.md`, `ROADMAP.md`, `CHANGELOG.md`, and `SECURITY.md`
+
+The next maintenance focus is not adding more doctors. It is making the project easier to install, reproduce, evaluate, and release.
 
 ### What This Is
 
@@ -529,6 +580,17 @@ evals/
 
 docs/
   eval-design.md            # evaluation design notes
+  release-checklist.md      # pre-release checklist
+
+.github/
+  ISSUE_TEMPLATE/           # bug, eval, and docs issue templates
+  PULL_REQUEST_TEMPLATE.md  # pull request review template
+
+CHANGELOG.md                # release notes
+CONTRIBUTING.md             # contribution guide
+ROADMAP.md                  # maintenance roadmap
+SECURITY.md                 # safety and privacy reporting policy
+LICENSE                     # MIT license
 ```
 
 ### Good Fit / Bad Fit
