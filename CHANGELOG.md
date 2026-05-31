@@ -8,14 +8,9 @@ changes, not only code diffs.
 
 ## Unreleased
 
-### Added
+- No changes yet.
 
-- Added open-source maintenance metadata: license, contribution guide, security
-  policy, roadmap, release checklist, issue templates, and pull request template.
-- Added explicit maintainer workflow documentation for triage, evaluation,
-  release, and documentation updates.
-
-## 0.1.0 - 2026-04-26
+## 0.1.0 - 2026-05-31
 
 ### Added
 
@@ -29,9 +24,17 @@ changes, not only code diffs.
 - Live evaluation protocol and first raw live comparison trace:
   `evals/results/live-2026-04-26.md`.
 - Auditable local memory templates under `memory/`.
+- Installation and runtime notes for Codex, Claude, and compatible local skill
+  environments.
+- Open-source maintenance metadata: license, contribution guide, security
+  policy, roadmap, release checklist, issue templates, and pull request template.
+- Explicit maintainer workflow documentation for triage, evaluation, release,
+  and documentation updates.
 
 ### Changed
 
 - README now prioritizes raw evaluation output over polished examples.
 - Host rules were tightened to avoid fake consensus, over-summary, premature
   closure, and mode flattening.
+- README now exposes project signals, maintenance status, and repository map
+  links for first-time users and reviewers.
